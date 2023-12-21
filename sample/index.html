@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+.container{
+    position: absolute;
+    top:10px;
+    right:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.helpcontainer{
+    position: absolute;
+    
+    bottom: 8%; 
+ 
+   
+    /* display: flex; 
+    display:inline-block; 
+    flex-direction: column;
+    align-items: flex-end; */
+
+ } 
+/* .helpcontainer{
+    display: inline-block;
+    max-width: 100%;
+
+} */
+
+.imagesec1{
+    max-width: 60%;
+    
+    margin-left: 20%;
+    /* display: block; */
+    
+} 
+.imagesec2{
+    max-width: 100%;
+    height: auto;
+    /* display: block; */
+    
+} 
+body{
+    margin:0;
+    padding: 0;
+
+}
+.button{
+    margin-bottom: 10px; 
+   
+    
+}
+#buttonmuteon{
+    opacity: 0; 
+}
+
+.HotspotAnnotation{
+    color:#160f48;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+
+}
+.Hotspot{
+    border-radius: 5px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+#model-viewer{
+    width: 100%;
+    height:85vh;
+    /* height:100%; */
+    position: inherit; 
+    /* margin-left: 5vh; */
+  
+
+
+}
+
+
+
+</style>
+</head>
+<body>
+    <script>
+
+   
+
+
+        function dataCheck() {
+            window.location.href = "https://santhiyasandysandy.github.io/LTM/sample/medu_video.mp4";
+            var audio = document.getElementById('backgroundAudio');
+            audio.volume=0;
+
+
+        }
+        function website_redirect() {
+            window.location.href = "https://www.medtronicdiabetes.com/products/inpen-smart-insulin-pen-system";
+            var audio = document.getElementById('backgroundAudio');
+            audio.volume=0;
+
+
+        }
+        function instructions(){
+            
+           
+                console.log("clicked");
+    var audio = document.getElementById('backgroundAudio');
+    audio.play();
+    var inst=document.getElementById('instructionset');
+    var muteon = document.getElementById('buttonmuteon');
+   
+    inst.style.opacity=0;
+    muteon.style.opacity=1;
+    
+   
+
+
+            
+        }
+        function muteassistant(){
+            
+            var audio = document.getElementById('backgroundAudio');
+           
+            
+            var mutes = document.getElementById('buttonmuteon');
+           
+            var a=mutes.getAttribute('src');
+            console.log(a);
+            if(a=="./Unmute.png"){
+               
+                mutes.setAttribute('src','./Mute.png');
+               audio.volume=0;
+             
+
+
+            }
+            else if(a=="./Mute.png"){
+                
+                mutes.setAttribute('src','./Unmute.png')
+                audio.volume=1;
+                
+               
+
+
+            }
+               
+            
+
+            
+            
+
+
+
+        }
+       
+
+        
+    </script>
+    
+        <!-- <model-viewer  id="model-viewer" src="./Inpen _anno_removed.glb"  ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" camera-orbit="-2.617deg 81.98deg 0.6375m" field-of-view="40deg" auto-rotate> -->
+            <model-viewer id="model-viewer" src="Inpen _anno_removed.glb" alt="A 3D model of a can"
+camera-controls="" ar-modes="scene-viewer quick-look webxr" background-color="#455A64">
+            <button class="Hotspot" slot="hotspot-2" data-position="0.06m 0.053m -0.00009" data-normal="-0.7730109080479949m 6.238904220006494e-8m 0.6343927301276477m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">Insulin Needle</div>
+            </button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.056m 0.1098m 2.3308429001993314e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">Cap</div>
+            </button>
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.068m 0.01m 1.8092726943377824e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">Insulin Cartridge <br/> Holder</div>
+            </button>
+        </button><button class="Hotspot" slot="hotspot-5" data-position="0.06m -0.086m -4.691454379059795e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Dose Knob</div>
+        </button>
+        </button><button class="Hotspot" slot="hotspot-6" data-position="-0.068m -0.09689001585373994m -2.8690562859506885e-10m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Injection Button</div>
+        </button>
+        <button class="Hotspot" slot="hotspot-7" data-position="-0.07m -0.072m -4.919251944159042e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Dose Window</div>
+        </button> 
+    </model-viewer>  
+
+    <!-- <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div> -->
+    <!-- <model-viewer src="./Inpen AR_Annotations 6.glb" ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate camera-orbit="-33.44deg 97.89deg 0.6375m" field-of-view="30deg" min-camera-orbit="auto auto 0.6375m" min-field-of-view="30deg">
+        <button class="Hotspot" slot="hotspot-2" data-position="0.038070651883827446m 0.06000463785017587m -3.875551224125778e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Insulin Needle</div> -->
+        <!-- </button><button class="Hotspot" slot="hotspot-3" data-position="-0.06488566165911044m 0.11104357884342692m 2.3308429001993314e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Cap</div>
+        </button><button class="Hotspot" slot="hotspot-4" data-position="-0.07257582673681048m 0.0023539261050888466m 1.8092726943377824e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Insulin Cartridge Holder</div>
+        </button><button class="Hotspot" slot="hotspot-5" data-position="0.04101822293907804m -0.0810969025244545m -4.691454379059795e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Dose Knob</div>
+        </button><button class="Hotspot" slot="hotspot-6" data-position="-0.06030170705997912m -0.09689001585373994m -2.8690562859506885e-10m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Injection Button</div>
+        </button><button class="Hotspot" slot="hotspot-7" data-position="-0.037413208394380164m -0.06842238571066664m -4.919251944159042e-9m" data-normal="1.9396347990801973e-7m 1.5893264623503375e-8m 0.9999999999999812m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Dose Window</div>
+        </button> -->
+    <!-- </model-viewer> -->
+    
+    <!-- <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div> -->
+
+<!-- <model-viewer id="model-viewer" src="Inpen AR_Annotations 6.glb" alt="A 3D model of a can"
+camera-controls="" ar-modes="scene-viewer quick-look webxr" background-color="#455A64"> -->
+
+
+<div class="container">
+   
+        <img class="button" src="VectorWeb1.png" width="45px" height="45px"  onclick="website_redirect()">
+  
+    
+        <img class="button" src="VectorVideo1.png" width="45px" height="45px" onclick="dataCheck()">
+        <audio id="backgroundAudio" loop>
+            <source src="./AudioM.wav" type="audio/mp3">
+           
+          </audio>
+        
+
+    </div>
+     
+    <div class="helpcontainer">
+        
+        <img   class="imagesec1" id="instructionset"  src="./GroupClick.png"  onclick="instructions()">
+        <img  class="imagesec2" id="buttonmuteon" src="./Unmute.png" width="45px" height="45px" onclick="muteassistant()">
+        
+    </div>
+   
+    
+
+
+
+</body>
+</html> 
